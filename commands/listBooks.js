@@ -20,7 +20,7 @@ module.exports = {
             if (books.length === 0) {
                 message.reply('No books found.');
             } else {
-                message.reply(`Books in your library:\n\n${books.map(book => `${book._id} , ${book.title} , ${book.author} , ${book.genre}`).join('\n')}`);
+                message.reply(`Books in your library:\n\n${books.map(book => `- ${book._id}\n - ${book.title}\n - ${book.author}\n - ${book.genre}`).join('\n\n')}`);
             }
         } catch (error) {
             console.error(error);
